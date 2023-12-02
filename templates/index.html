@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge-Based System</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">LEARN SYNC</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+       
+        <img src="monkey1.jpg" id="monkey1">
+        <img src="forrest.jpg" id="forest">
+        <a href="#" id="btn">Let's get started</a>
+        <h2 id="text"><span>Personalized </span><br> Academic Adviser</h2>
+    </section>
+    <div class="sec">
+        <h2>Welcome</h2>
+        <div class="scrollable">
+        <p>For many students, identifying the best side hustles, supplementary courses, and clubs that complement their area of study can be a daunting task.
+            Fortunately, we offer an intelligent recommendation system that solves this problem. Our system not only assists students in choosing the right 
+            side hustles, courses, and clubs but also ensures that they align with their academic goals and personal interests. By utilizing our recommendation system,
+            students can make informed decisions and take the necessary steps to enhance their academic and personal growth. Our system empowers students to better comprehend
+             their courses and acquire practical skills, making learning more enjoyable and less distracting.</p>
+
+
+            <h1><br>Key in your course and we shall give you some recommendations</h1>
+    <form action="/get" method="post" class="chat-form">
+        <input type="text" name="input" required>
+        <button type="submit">Ask</button>
+    </form>
+        </div>
+    </div>
+
+    <script>
+        let text   = document.getElementById('text');
+        let monkey1  = document.getElementById('monkey1');
+        let forest = document.getElementById('forest');
+        let btn    =  document.getElementById('btn');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+
+            text.style.top = 50 + value * -0.5 + '%';
+            monkey1.style.top = value * -0.5 + 'px';
+            monkey1.style.left = value * 5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            forest.style.top = value * 0.20 + 'px';
+            header.style.top = value * 0.5 + 'px';
+
+
+        })
+     </script>
+</body>
+</html>
